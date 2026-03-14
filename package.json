@@ -1,0 +1,39 @@
+{
+  "name": "docproof-agent",
+  "version": "1.0.0",
+  "description": "CLI Web3 agent for proof-of-existence on Avalanche Fuji with x402 payments (facinet-sdk)",
+  "main": "agent/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network fuji",
+    "test": "npx hardhat test",
+    "register": "node agent/index.js register",
+    "verify": "node agent/index.js verify"
+  },
+  "keywords": [
+    "web3",
+    "avalanche",
+    "hardhat",
+    "cli",
+    "proof-of-existence",
+    "x402",
+    "facinet-sdk"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "chai": "^4.3.8",
+    "hardhat": "^2.17.0",
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.0.0",
+    "ethers": "^6.0.0",
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "pdfkit": "^0.14.0"
+  }
+}
